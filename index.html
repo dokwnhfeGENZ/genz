@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GENZ — ideas, notes, and experiments from the edge of the internet." />
+  <title>GENZ — Digital notes from the edge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wallpaper"></div>
+  <header class="menubar">
+    <div class="menu-left"><button class="apple" aria-label="Open home">◉</button><strong>GENZ</strong><button>File</button><button>Edit</button><button>View</button><button>Window</button></div>
+    <div class="menu-right"><button id="menuSearch" class="menu-search">⌘ K <span>Search</span></button><span class="status">⌁</span><span class="status">◔</span><span id="clock">09:41</span></div>
+  </header>
+
+  <main class="desktop" id="desktop">
+    <section class="welcome window active-window" data-window="home">
+      <div class="window-bar"><div class="traffic"><button class="close" aria-label="Close">×</button><button class="minimize" aria-label="Minimize">−</button><button class="maximize" aria-label="Maximize">+</button></div><span>Welcome — GENZ</span><button class="window-more">•••</button></div>
+      <div class="welcome-content">
+        <div class="eyebrow">PERSONAL DIGITAL GARDEN · 2025</div>
+        <h1>Ideas for a<br><em>more curious</em> internet.</h1>
+        <p class="lede">GENZ is a collection of essays, field notes and experiments about technology, culture and the people shaping what comes next.</p>
+        <div class="hero-actions"><button class="primary" data-open="articles">Explore the archive <span>↗</span></button><button class="text-button" data-open="about">Meet the writer <span>→</span></button></div>
+        <div class="home-meta"><span><i class="dot"></i> Currently online</span><span>Based somewhere on Earth</span><span>Vol. 04 / 2025</span></div>
+      </div>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    </section>
+
+    <section class="window archive" data-window="articles" hidden>
+      <div class="window-bar"><div class="traffic"><button class="close" aria-label="Close">×</button><button class="minimize">−</button><button class="maximize">+</button></div><span>Archive — GENZ</span><button class="window-more">•••</button></div>
+      <div class="window-body"><div class="section-heading"><div><div class="eyebrow">THE ARCHIVE</div><h2>Recent notes</h2></div><span class="count">06 entries</span></div><div class="articles-list" id="articlesList"></div></div>
+    </section>
+
+    <section class="window about" data-window="about" hidden>
+      <div class="window-bar"><div class="traffic"><button class="close">×</button><button class="minimize">−</button><button class="maximize">+</button></div><span>About — GENZ</span><button class="window-more">•••</button></div>
+      <div class="window-body about-body"><div class="eyebrow">A LITTLE CONTEXT</div><h2>Hi, I’m Alex.<br><em>I like making sense<br>of noisy things.</em></h2><p>I write about the intersection of people and technology — the small details, strange edges and hopeful possibilities that usually get missed in the bigger conversation.</p><div class="about-grid"><div><span>01</span><strong>Writing</strong><p>Essays, criticism and notes on digital culture.</p></div><div><span>02</span><strong>Making</strong><p>Small experiments that make the web feel personal.</p></div><div><span>03</span><strong>Learning</strong><p>Always collecting better questions.</p></div></div><a class="email" href="mailto:hello@genz.example">hello@genz.example ↗</a></div>
+    </section>
+  </main>
+
+  <nav class="dock" aria-label="Application dock"><button class="dock-item selected" data-open="home"><span class="dock-icon finder">✦</span><label>Home</label></button><button class="dock-item" data-open="articles"><span class="dock-icon folder">▰</span><label>Archive</label></button><button class="dock-item" data-open="about"><span class="dock-icon notes">≡</span><label>About</label></button><button class="dock-item" id="dockSearch"><span class="dock-icon search">⌕</span><label>Search</label></button><span class="dock-divider"></span><a class="dock-item" href="https://github.com/dokwnhfeGENZ/genz" target="_blank" rel="noreferrer"><span class="dock-icon terminal">&gt;_</span><label>GitHub</label></a></nav>
+
+  <div class="search-overlay" id="searchOverlay" hidden><div class="search-box"><div class="search-top"><span class="search-mark">⌕</span><input id="searchInput" autocomplete="off" placeholder="Search the archive…" /><kbd>ESC</kbd></div><div id="searchResults" class="search-results"><p class="search-hint">Search essays, notes and ideas</p></div></div></div>
+  <div class="toast" id="toast">Coming soon</div>
+  <script src="app.js"></script>
+</body>
+</html>
